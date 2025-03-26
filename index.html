@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Process Monitoring Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-6">Real-Time Process Monitoring</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <canvas id="cpuChart"></canvas>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <canvas id="memoryChart"></canvas>
+            </div>
+        </div>
+
+       
+        <div class="overflow-x-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+            <table class="w-full table-auto">
+                <thead>
+                    <tr class="text-left bg-gray-700">
+                        <th class="px-4 py-3">Process ID</th>
+                        <th class="px-4 py-3">Name</th>
+                        <th class="px-4 py-3">CPU Usage</th>
+                        <th class="px-4 py-3">Memory Usage</th>
+                    </tr>
+                </thead>
+                <tbody id="processTable">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
